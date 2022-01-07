@@ -1,10 +1,15 @@
 
 <?php
     //Procedural PHP MySQLi wrapper by Kane, read readme.me for more information
+    //Remove the next two lines on production environments
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+    define("DEVMODE",true);
 
-    require("dbconfig.php");
-    require("config.php");
+    //replace with your database information
+    define("DB_HOST","localhost");
+    define("DB_USER","user");
+    define("DB_PASS","password");
+    define("DB_NAME","db-name");
 
     //function to display an error
     function error($error) {
